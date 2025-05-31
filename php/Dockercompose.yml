@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  app:
+    image: composer:latest
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: ["composer", "test"]

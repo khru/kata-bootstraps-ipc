@@ -7,9 +7,17 @@
 
 ## Test Command
 
+Your own machine
 ```sh
 $ composer test
 ```
+
+Docker
+```sh
+docker build -t kata-php-app .
+docker run --rm kata-php-app
+```
+
 
 ## References
 
