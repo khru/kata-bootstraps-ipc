@@ -3,14 +3,14 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.21"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:2.2.20"
     }
 }
 
 apply plugin: 'kotlin'
 
 kotlin {
-    jvmToolchain(23)
+    jvmToolchain(24)
 }
 
 test {
@@ -18,8 +18,8 @@ test {
 }
 
 dependencies {
-    testImplementation 'io.kotest:kotest-runner-junit5:5.9.1'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:2.1.21"
+    testImplementation 'io.kotest:kotest-runner-junit5:6.0.3'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:2.2.20"
 }
 repositories {
     mavenCentral()
