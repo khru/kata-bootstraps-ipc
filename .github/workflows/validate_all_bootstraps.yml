@@ -20,7 +20,7 @@ jobs:
     outputs:
       bootstraps: ${{ steps.generate-matrix.outputs.bootstraps }}
     steps:
-      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
       - name: Generate Matrix
         id: generate-matrix
         run: |
@@ -38,10 +38,10 @@ jobs:
       matrix:
         bootstrap: ${{ fromJson(needs.find_bootstraps.outputs.bootstraps) }}
     steps:
-      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+      - uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6
         with:
           node-version: lts/*
-      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
       - name: Install Dev Tools
         working-directory: .bin/
         run: npm install
